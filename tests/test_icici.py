@@ -5,7 +5,7 @@ import pandas as pd
 from custom_parsers.icici_parser import parse
 
 def test_icici():
-    expected = pd.read_csv("data/icici/icici_sample.csv")
-    actual = parse("data/icici/icici_sample.pdf")
+    expected = pd.read_csv("data/icici/results.csv")
+    actual = parse("data/icici/icici_sample.pdf")  # keep PDF path here
     assert actual.equals(expected)
 
