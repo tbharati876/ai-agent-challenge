@@ -13,4 +13,22 @@ This project implements an autonomous agent (`agent.py`) that generates custom b
 2. Install dependencies
     ```bash
    pip install -r requirements.txt
+3. Run the agent for ICICI
+    ```bash
+    python agent.py --target icici
+4. Parser gets generated
+    ```bash
+    custom_parsers/icici_parser.py
+5. Run tests
+    ```bash
+    pytest -q
+---
+Agent diagram
+
+The agent follows a simple autonomous loop: it plans the next step, generates code for the parser, runs tests against the expected CSV, and if tests fail, it enters a self-correction loop with up to three retries. Once tests pass, the loop stops and the parser is finalized.
+```bash
+Plan → Generate parser → Run tests → Retry (≤3x) → Done 
+
+   
+   
 
