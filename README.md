@@ -10,4 +10,7 @@ This project implements an autonomous agent (`agent.py`) that generates custom b
    ```bash
    git clone https://github.com/tbharati876/ai-agent-challenge.git
    cd ai-agent-challenge
+2. Install dependencies
+    ```bash
+   pip install -r requirements.txt
 
